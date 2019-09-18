@@ -20,8 +20,6 @@ then replace src,href or all static file links in this format
 src = "{% static 'img/vpv.png' %}"
 
 ```
-* and piyush your
-``static/QuizMania_v2/img or css`` directory converted in 
-``static/img or css``
+
 
 

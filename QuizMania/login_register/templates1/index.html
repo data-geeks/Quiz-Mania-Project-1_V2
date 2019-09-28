@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>QuizMania</title>
 	<link rel="stylesheet" href="{% static 'auth.css' %}">  <!-- format to insert the path of css file-->
+	
 	<script type="text/javascript">
     		function accessCookie(cookieName)
   		{
@@ -21,14 +22,15 @@
   		}
     		function checkCookie()
   		{
-  		var user = accessCookie("User_Id");
+  		var user = accessCookie("Email");
   		if (user!="")
     		window.location="/";
   		}
 	</script>
+
 </head >
 
-<body onload="checkCookie()">
+<body onload="checkCookie() > <!-- onload="checkCookie()" -->
 	<div class="lowin">
 		<div class="lowin-brand">
 			<img src="{% static 'kodinger.jpg' %}" alt="logo">
@@ -107,11 +109,13 @@
 	</div>
 
 	<script src="{% static 'auth.js' %}"></script>
+	
 	<script>
 		Auth.init({
 			login_url: 'login_check', // login_check calls the function in views.py to verify logged in user,cookies and session
 			forgot_url: '#forgot'
 		});
 	</script>
+
 </body>
 </html>

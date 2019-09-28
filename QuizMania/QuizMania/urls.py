@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('QuizMania_V2.urls')),
     path('',include('login_register.urls')),
+    path('',include('TestTime.urls'))
 ]

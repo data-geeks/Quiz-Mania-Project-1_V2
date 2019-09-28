@@ -1,18 +1,16 @@
 from django.shortcuts import render,reverse
 from django.http import Http404,HttpResponseRedirect,HttpResponse  
 from django.contrib.auth import authenticate,login,logout 
-from http import cookies 
 from django.contrib.auth.models import User 
-
 # Create your views here.
-global c
-c = cookies.SimpleCookie()
+
 #this is to open the login and registeration page when user comes on website first time
 def login_reg(request):
     if  not request.user.is_authenticated:
         return render(request,'index.html') # if user is not logged in open login form
     else:
-        return render(request,'Catalog.html',c) # if user is logged in and again redirects to base url then show main catalog page
+        #return HttpResponseRedirect(reverse('login_page'))
+        return render(request,'Catalog.html') # if user is logged in and again redirects to base url then show main catalog page
 
 # this is to extract user data from registration form
 def register(request):
@@ -36,6 +34,8 @@ def register(request):
 
 # this is to check the user has entered valid credentials while log in
 def login_check(request):
+    if request.user.is_authenticated:
+        return render(request,'Catalog.html')
     # fetch the email and password to check login credentials
     email = request.POST['email']  
     password = request.POST['password']
@@ -45,16 +45,8 @@ def login_check(request):
 
     if user is not None: # user gets some value if user enters valid credentials
         login(request,user)  # creates a session for the user
-
-        # time to set cookies using cookies module
-        # set the cookie based on email only
-        c = cookies.SimpleCookie()
-        c['User_Name'] = email
-        c['User_Name']['path'] = '/'
-        c['Email'] = email
-        c['Email']['path'] = '/'
-        return HttpResponseRedirect('/login_reg') # c is send to Catalog page which are set by JS in Catalog.html page
-
+        #return HttpResponseRedirect(reverse('login_page'))
+        return HttpResponseRedirect(reverse('login_page')) # c is send to Catalog page which are set by JS in Catalog.html page
     else:
         return render(request,"index.html")  # open login page if user enters invalid credentials
 
@@ -63,4 +55,7 @@ def logout_check(request):
     logout(request) # deletes the session of the user
     # as soon as user is logged out open the index page again
     if not request.user.is_authenticated:  # to check if session for user has been terminated successfully
-            return HttpResponseRedirect(reverse('login_page'))
+        return HttpResponseRedirect(reverse('login_page'))
+    else:
+        return HttpResponseRedirect(reverse('logged_out'))
+        

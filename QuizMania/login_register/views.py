@@ -1,3 +1,4 @@
+
 from django.shortcuts import render,reverse
 from django.http import Http404,HttpResponseRedirect,HttpResponse  
 from django.contrib.auth import authenticate,login,logout 
@@ -9,8 +10,11 @@ def login_reg(request):
     if  not request.user.is_authenticated:
         return render(request,'index.html') # if user is not logged in open login form
     else:
+        context = {
+            "user":request.user
+        }
         #return HttpResponseRedirect(reverse('login_page'))
-        return render(request,'Catalog.html') # if user is logged in and again redirects to base url then show main catalog page
+        return render(request,'Catalog.html',context) # if user is logged in and again redirects to base url then show main catalog page
 
 # this is to extract user data from registration form
 def register(request):

@@ -1,7 +1,25 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block UserName %} Pykid {% endblock %}
 
-{% block QuestionNo %}2{% endblock %}
+{% block value %} {{score}} {% endblock %}
 
+    {% block QuestionNo %} {{test.id}} {% endblock %}
 
+    {% block Question %} {{test.Question}} {% endblock %}
+
+    {% block OptionA %} {{test.Option1}} {% endblock %} 
+
+    {% block OptionB %} {{test.Option2}} {% endblock %}
+
+    {% block OptionC %} {{test.Option3}} {% endblock %}
+
+    {% block OptionD %} {{test.Option4}} {% endblock %}
+
+    {% block increment %} value="{{value}}" {% endblock %}
+
+    {% block score %} value="{{score}}" {% endblock %}
+
+    {% block wrong %} value="{{wrong}}" {% endblock %}
+    
+    {% block timer %}  {% endblock %}

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<!-- Title Page -->
-	<title>Welcome to the Quiz</title>
+	<title>{% block value %} Welcome to the Quiz {% endblock %}</title>
 
 	<!-- Meta -->
     <meta charset="utf-8">
@@ -19,7 +19,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link href="./css/custom_style.css" rel="stylesheet">
 
-
+<!--
 	<script type="text/javascript">
                 function accessCookie(cookieName)
                 {
@@ -39,9 +39,10 @@
                 if (user=="")
                 window.location="/login_reg";
                 }
-        </script>	
+		</script>	
+	-->
 </head>
-<body onload="checkCookie()">
+<body > <!--onload="checkCookie()"-->
 	<!-- Page Header -->
 	
   <header id="header" class="header header-hide">
@@ -69,7 +70,8 @@
 		<div class="ui text loader" style="margin-top: 250px;">Loading</div>
 	</div>
 	<div class="ui main container">
-		<form class="ui form opsi" action="www.google.com">
+		<form class="ui form opsi" action="/test_page" method="POST">
+			{% csrf_token %}
 		<div class="ui card">
 			<div class="content"  style="background: #71c55d">
 				<div class="ui header" style="font-size:15px;">
@@ -90,28 +92,31 @@
 					
 
 						<div class="opsi">
-							<input type="radio" name="opsi" class="opsi" id="a">
+							<input type="radio" name="opsi" class="opsi" id="a" value="A">
 							<label class="abjad" for="a">A</label>
 							<label class="isi">{% block OptionA %} Ansible {% endblock %}</label>
 						</div>
 
 						<div class="opsi">
-							<input type="radio" name="opsi" class="opsi" id="b">
+							<input type="radio" name="opsi" class="opsi" id="b" value="B">
 							<label class="abjad" for="b">B</label>
 							<label class="isi">{% block OptionB %} Docker {% endblock %}</label>
 						</div>
 
 						<div class="opsi">
-							<input type="radio" name="opsi" class="opsi" id="c">
+							<input type="radio" name="opsi" class="opsi" id="c" value="C">
 							<label class="abjad" for="c">C</label>
 							<label class="isi">{% block OptionC %} Devops {% endblock %}</label>
 						</div>
 
 						<div class="opsi">
-							<input type="radio" name="opsi" class="opsi" id="d">
+							<input type="radio" name="opsi" class="opsi" id="d" value="D">
 							<label class="abjad" for="d">D</label>
 							<label class="isi">{% block OptionD %} Linux {% endblock %}</label>
 						</div>
+						<input type="hidden" {% block increment %} value="0" {% endblock %} name="question_value">
+						<input type="hidden" {% block score %} value="0" {% endblock %} name="score">
+						<input type="hidden" {% block wrong %} value="0" {% endblock %} name="wrong">
 						</div>
 						
 					
@@ -192,7 +197,7 @@
   </script>
   <!--Timer-->
   <script type="text/javascript">
-		alert("Click OK to BEGIN!!!");
+		{% block timer %} alert("Click OK to BEGIN!!!"); {% endblock %}
 		document.getElementById('timer').innerHTML =
   30 + ":" + 00;
 startTimer();

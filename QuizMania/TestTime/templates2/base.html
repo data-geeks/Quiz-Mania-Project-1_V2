@@ -1,9 +1,11 @@
+<!-- All the block tags are definded to change the values dynamically using jinja at run time-->
+<!-- csrf token tag is used to removed CSRF authentication issues and is applied in all forms need to be submitted-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<!-- Title Page -->
-	<title>{% block value %} Welcome to the Quiz {% endblock %}</title>
+	<title> Welcome to the Quiz</title> 
 
 	<!-- Meta -->
     <meta charset="utf-8">
@@ -19,7 +21,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link href="./css/custom_style.css" rel="stylesheet">
 
-<!--
+<!-- The cookies are not being used here as user authentication is being checked at backend using session authentication of Django-->
+<!-- 
 	<script type="text/javascript">
                 function accessCookie(cookieName)
                 {
@@ -74,7 +77,7 @@
 			{% csrf_token %}
 		<div class="ui card">
 			<div class="content"  style="background: #71c55d">
-				<div class="ui header" style="font-size:15px;">
+				<div class="ui header" style="font-size:15px;">																											<!-- it changes the question number as per the id of question in table-->
 				<p style="color:white; font-size: 15px"><b>Questions : </b><span data-position="bottom right" data-tooltip="Nomor Soal Saat Ini" class="ui blue label">{% block QuestionNo %} 1 {% endblock %}</span></p>
 
 					
@@ -89,29 +92,29 @@
 			
 				<div class="description" padding-left=30;>
 					<h4><p >{% block Question %} Which technology is used for automation? {% endblock %}</p></h4>
-					
+					<!-- this block is to dynamically change the question -->
 
 						<div class="opsi">
 							<input type="radio" name="opsi" class="opsi" id="a" value="A">
-							<label class="abjad" for="a">A</label>
+							<label class="abjad" for="a">A</label> <!-- option 1 its selection will be checked based on value='A'-->
 							<label class="isi">{% block OptionA %} Ansible {% endblock %}</label>
 						</div>
 
 						<div class="opsi">
 							<input type="radio" name="opsi" class="opsi" id="b" value="B">
-							<label class="abjad" for="b">B</label>
+							<label class="abjad" for="b">B</label> <!-- option 2 its selection will be checked based on value='B'-->
 							<label class="isi">{% block OptionB %} Docker {% endblock %}</label>
 						</div>
 
 						<div class="opsi">
 							<input type="radio" name="opsi" class="opsi" id="c" value="C">
-							<label class="abjad" for="c">C</label>
+							<label class="abjad" for="c">C</label> <!-- option 3 its selection will be checked based on value='C'-->
 							<label class="isi">{% block OptionC %} Devops {% endblock %}</label>
 						</div>
 
 						<div class="opsi">
 							<input type="radio" name="opsi" class="opsi" id="d" value="D">
-							<label class="abjad" for="d">D</label>
+							<label class="abjad" for="d">D</label>  <!-- option 4 its selection will be checked based on value='D'-->
 							<label class="isi">{% block OptionD %} Linux {% endblock %}</label>
 						</div>
 						<input type="hidden" {% block increment %} value="0" {% endblock %} name="question_value">
@@ -196,7 +199,7 @@
 	});
   </script>
   <!--Timer-->
-  <script type="text/javascript">
+  <script type="text/javascript"> // the block timer will  remove dynamically remove the alert box from 2nd question
 		{% block timer %} alert("Click OK to BEGIN!!!"); {% endblock %}
 		document.getElementById('timer').innerHTML =
   30 + ":" + 00;

@@ -1,9 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} <!-- this is to show the path of base file which is being dynamically changed using jinja-->
 
-{% block UserName %} Pykid {% endblock %}
+{% block UserName %} Pykid {% endblock %}  <!-- to dynamically show the user name from table... Need few corrections-->
 
-{% block value %} {{score}} {% endblock %}
-
+<!-- this is to present the question and options from table-->
     {% block QuestionNo %} {{test.id}} {% endblock %}
 
     {% block Question %} {{test.Question}} {% endblock %}
@@ -16,10 +15,13 @@
 
     {% block OptionD %} {{test.Option4}} {% endblock %}
 
+<!-- this is to change the id value or grasp the required/next question from table-->
     {% block increment %} value="{{value}}" {% endblock %}
 
+<!-- Every page carries the scored and incorrect scored marks with it in hidden format -->
     {% block score %} value="{{score}}" {% endblock %}
 
     {% block wrong %} value="{{wrong}}" {% endblock %}
-    
+
+<!-- this is used to remove the alert box from the 2nd question onwards -->
     {% block timer %}  {% endblock %}

@@ -54,8 +54,8 @@
       <div id="logo" class="pull-left">
         <h1><a href="#body" class="scrollto"><span>Quiz</span>Mania</a></h1>
       </div>
-      <div id="logo" class="pull-right">							<!-- after logout, delete the cookies-->
-        <button  class="btn btn-primary" type="button" id="login" onclick="checkCookie()" ><a href="/logout">Logout</a></button>
+      <div class="dropdown pull-right">							<!-- after logout, delete the cookies-->
+        <button  class="btn btn-success" type="button" id="login" onclick="checkCookie()"><a href="/logout"><h4 class="he">Logout</h4></a></button>
       </div>								<!-- need to change the css for log out button-->
 			
 		</div>
@@ -79,7 +79,7 @@
 		<div class="col-lg-4"></div>
 		<ul class="nav nav-pills col-lg-6" role="tablist">
 				
-			<li class="nav-item">
+			<li class="nav-item active">
 				<a class="nav-link" data-toggle="pill" href="#home">BEGINNER</a>
 			</li>
 			<li class="nav-item">
@@ -92,6 +92,7 @@
 	
 	</nav> 		
 			
+		<!-- Basic Pages-->
 			<!-- Tab panes -->
 			<div class="tab-content">
 				<div id="home" class="container tab-pane active"><br>
@@ -104,293 +105,479 @@
 								<div class="row">
 									
 								 <div class="col-md-6 col-lg-3">
-										<form action="/base" method="post">
+										<form action= "/Docker_B" method="post">
 											{% csrf_token %}
-											<input type="hidden" class ="userID" name="userid" value="">
-											<input type="hidden" name="testid" value="1">
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
 											<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
-											
+											<input type="hidden"  value="0"  name="question_value">
+											<input type="hidden"  value="0"  name="score">
+											<input type="hidden"  value="0"  name="wrong">
+											<input type="hidden"  value="Docker_B"  name="Testname">
 											<h4>Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
 									</button>
-									</div>
 								</form>
+									</div>
+								
 								
 					
 					
 									<div class="col-md-6 col-lg-3">
-											<form action="/base" method="post">
+											<form action="/AWS_B" method="post">
 												{% csrf_token %}
-												<input type="hidden" class ="userID" name="userid" value="">
-												<input type="hidden" name="testid" value="2">
 												<button type="submit" style="background-color: transparent; color: white; border: none">
 											<div class="feature-block" >
 												<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
-												
+												<input type="hidden"  value="0"  name="question_value">
+												<input type="hidden"  value="0"  name="score">
+												<input type="hidden"  value="0"  name="wrong">
+												<input type="hidden"  value="AWS_B"  name="Testname">
 												<h4>EC-2</h4>
 												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 											</div>
 										</button>
-										</div>
 									</form>
+									</div>
+									
 									
 					
 									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" height="90" width="85">
-					
-											<h4>Redhat</h4>
-					
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+										<form action="/Redhat_B" method="post">
+											{% csrf_token %}
+											<button type="submit" style="background-color: transparent; color: white; border: none">
+										<div class="feature-block" >
+											<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" alt="img" class="img-fluid">
+											<input type="hidden"  value="0"  name="question_value">
+											<input type="hidden"  value="0"  name="score">
+											<input type="hidden"  value="0"  name="wrong">
+											<input type="hidden"  value="Redhat_B"  name="Testname">
+											<h4>Demo</h4>
+											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
+									</button>
+								</form>
 									</div>
 					
 									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
+										<form action="/Python_B" method="post">
+											{% csrf_token %}
+											<button type="submit" style="background-color: transparent; color: white; border: none">
+										<div class="feature-block" >
 											<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
-											<h4>Python</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+											<input type="hidden"  value="0"  name="question_value">
+											<input type="hidden"  value="0"  name="score">
+											<input type="hidden"  value="0"  name="wrong">
+											<input type="hidden"  value="Python_B"  name="Testname">
+											<h4>Demo</h4>
+											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
+									</button>
+								</form>
 									</div>
 					
 									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
+										<form action="/Tensorflow_B" method="post">
+											{% csrf_token %}
+											<button type="submit" style="background-color: transparent; color: white; border: none">
+										<div class="feature-block" >
 											<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
-											<h4>Tensorflow</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+											<input type="hidden"  value="0"  name="question_value">
+											<input type="hidden"  value="0"  name="score">
+											<input type="hidden"  value="0"  name="wrong">
+											<input type="hidden"  value="Tensorflow_B"  name="Testname">
+											<h4>Demo</h4>
+											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
+									</button>
+								</form>
 									</div>
 					
 									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
+										<form action="/ComputerVision_B" method="post">
+											{% csrf_token %}
+											<button type="submit" style="background-color: transparent; color: white; border: none">
+										<div class="feature-block" >
 											<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
-											<h4>Computer Vision</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+											<input type="hidden"  value="0"  name="question_value">
+											<input type="hidden"  value="0"  name="score">
+											<input type="hidden"  value="0"  name="wrong">
+											<input type="hidden"  value="ComputerVision_B"  name="Testname">
+											<h4>Demo</h4>
+											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
+									</button>
+								</form>
 									</div>
 					
 									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
+										<form action="/Kubernetes_B" method="post">
+											{% csrf_token %}
+											<button type="submit" style="background-color: transparent; color: white; border: none">
+										<div class="feature-block" >
 											<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
-											<h4>Kubernetes</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+											<input type="hidden"  value="0"  name="question_value">
+											<input type="hidden"  value="0"  name="score">
+											<input type="hidden"  value="0"  name="wrong">
+											<input type="hidden"  value="Kubernetes_B"  name="Testname">
+											<h4>Demo</h4>
+											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
+									</button>
+								</form>
 									</div>
 					
 									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/svg/code.svg' %}" alt="img" class="img-fluid">
-											<h4>Scikit learn</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+										<form action="/ScikitLearn_B" method="post">
+											{% csrf_token %}
+											<button type="submit" style="background-color: transparent; color: white; border: none">
+										<div class="feature-block" >
+											<img src="{% static 'QuizMania_V2/img/scikit.png' %}" alt="img" class="img-fluid">
+											<input type="hidden"  value="0"  name="question_value">
+											<input type="hidden"  value="0"  name="score">
+											<input type="hidden"  value="0"  name="wrong">
+											<input type="hidden"  value="ScikitLearn_B"  name="Testname">
+											<h4>Demo</h4>
+											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
+									</button>
+								</form>
 									</div>
 					
 								</div>
 							</div>
 						</section>
 				</div>
-				<div id="menu1" class="container tab-pane fade"><br>
-					<section id="features" class="padd-section text-center wow fadeInUp">
+			
+<!------------------------------------------------------------------------------------------------------------------------------>
+<div id="menu1" class="container tab-pane"><br>
+					
+	<section id="features" class="padd-section text-center wow fadeInUp">
 
-							
+			
+	
+			<div class="container">
+				<div class="row">
 					
-							<div class="container">
-								<div class="row">
-									
-								 <div class="col-md-6 col-lg-3">
-										<form action="/base" method="post">
-											{% csrf_token %}
-											<input type="hidden" class ="userID" name="userid" value="">
-											<input type="hidden" name="testid" value="1">
-											<button type="submit" style="background-color: transparent; color: white; border: none">
-										<div class="feature-block" >
-											<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
-											
-											<h4>Demo</h4>
-											<p>This is the demo test, This page will explain whats going on</p>
-										</div>
-									</button>
-									</div>
-								</form>
-								
-					
-					
-									<div class="col-md-6 col-lg-3">
-											<form action="/base" method="post">
-												{% csrf_token %}
-												<input type="hidden" class ="userID" name="userid" value="">
-												<input type="hidden" name="testid" value="2">
-												<button type="submit" style="background-color: transparent; color: white; border: none">
-											<div class="feature-block" >
-												<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
-												
-												<h4>EC-2</h4>
-												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-											</div>
-										</button>
-										</div>
-									</form>
-									
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" height="90" width="85">
-					
-											<h4>Redhat</h4>
-					
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
-											<h4>Python</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
-											<h4>Tensorflow</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
-											<h4>Computer Vision</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
-											<h4>Kubernetes</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/svg/code.svg' %}" alt="img" class="img-fluid">
-											<h4>Scikit learn</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-								</div>
-							</div>
-						</section>
-				</div>
-				<div id="menu2" class="container tab-pane fade"><br>
-					<section id="features" class="padd-section text-center wow fadeInUp">
+				 <div class="col-md-6 col-lg-3">
+						<form action="/Docker_I" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Docker_I"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+				
+				
+	
 
-							
-					
-							<div class="container">
-								<div class="row">
-									
-								 <div class="col-md-6 col-lg-3">
-										<form action="/base" method="post">
-											{% csrf_token %}
-											<input type="hidden" class ="userID" name="userid" value="">
-											<input type="hidden" name="testid" value="1">
-											<button type="submit" style="background-color: transparent; color: white; border: none">
-										<div class="feature-block" >
-											<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
-											
-											<h4>Demo</h4>
-											<p>This is the demo test, This page will explain whats going on</p>
-										</div>
-									</button>
-									</div>
-								</form>
-								
-					
-					
-									<div class="col-md-6 col-lg-3">
-											<form action="/base" method="post">
-												{% csrf_token %}
-												<input type="hidden" class ="userID" name="userid" value="">
-												<input type="hidden" name="testid" value="2">
-												<button type="submit" style="background-color: transparent; color: white; border: none">
-											<div class="feature-block" >
-												<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
-												
-												<h4>EC-2</h4>
-												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-											</div>
-										</button>
-										</div>
-									</form>
-									
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" height="90" width="85">
-					
-											<h4>Redhat</h4>
-					
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
-											<h4>Python</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
-											<h4>Tensorflow</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
-											<h4>Computer Vision</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
-											<h4>Kubernetes</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-									<div class="col-md-6 col-lg-3">
-										<div class="feature-block">
-											<img src="{% static 'QuizMania_V2/img/svg/code.svg' %}" alt="img" class="img-fluid">
-											<h4>Scikit learn</h4>
-											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-										</div>
-									</div>
-					
-								</div>
+					<div class="col-md-6 col-lg-3">
+							<form action="/AWS_I" method="post">
+								{% csrf_token %}
+								<button type="submit" style="background-color: transparent; color: white; border: none">
+							<div class="feature-block" >
+								<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
+								<input type="hidden"  value="0"  name="question_value">
+								<input type="hidden"  value="0"  name="score">
+								<input type="hidden"  value="0"  name="wrong">
+								<input type="hidden"  value="AWS_I"  name="Testname">
+								<h4>EC-2</h4>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 							</div>
-						</section>
+						</button>
+					</form>
+					</div>
+					
+					
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/Redhat_I" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Redhat_I"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/Python_I" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Python_I"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/Tensorflow_I" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Tensorflow_I"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/ComputerVision_I" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="ComputerVision_I"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/Kubernetes_I" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Kubernetes_I"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/ScikitLearn_I" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/scikit.png' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="ScikitLearn_I"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
 				</div>
 			</div>
-		</div>
-		
-	<!------------------------------------------------------------------------------------------------------------------------------------------------>
+		</section>
+</div>
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------->
+
+<div id="menu2" class="container tab-pane "><br>
+					
+	<section id="features" class="padd-section text-center wow fadeInUp">
+
+			
 	
+			<div class="container">
+				<div class="row">
+					
+				 <div class="col-md-6 col-lg-3">
+						<form action="/Docker_A" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Docker_A"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+				
+				
+	
+	
+					<div class="col-md-6 col-lg-3">
+							<form action="/AWS_A" method="post">
+								{% csrf_token %}
+								<button type="submit" style="background-color: transparent; color: white; border: none">
+							<div class="feature-block" >
+								<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
+								<input type="hidden"  value="0"  name="question_value">
+								<input type="hidden"  value="0"  name="score">
+								<input type="hidden"  value="0"  name="wrong">
+								<input type="hidden"  value="AWS_A"  name="Testname">
+								<h4>EC-2</h4>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+							</div>
+						</button>
+					</form>
+					</div>
+					
+					
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/Redhat_A" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Redhat_A"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/Python_A" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Python_A"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/Tensorflow_A" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Tensorflow_A"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/ComputerVision_A" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="ComputerVision_A"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/Kubernetes_A" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="Kubernetes_A"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+					<div class="col-md-6 col-lg-3">
+						<form action="/ScikitLearn_A" method="post">
+							{% csrf_token %}
+							<button type="submit" style="background-color: transparent; color: white; border: none">
+						<div class="feature-block" >
+							<img src="{% static 'QuizMania_V2/img/scikit.png' %}" alt="img" class="img-fluid">
+							<input type="hidden"  value="0"  name="question_value">
+							<input type="hidden"  value="0"  name="score">
+							<input type="hidden"  value="0"  name="wrong">
+							<input type="hidden"  value="ScikitLearn_A"  name="Testname">
+							<h4>Demo</h4>
+							<p>This is the demo test, This page will explain whats going on</p>
+						</div>
+					</button>
+				</form>
+					</div>
+	
+				</div>
+			</div>
+		</section>
+
+		
+</div>
+
+<div class="text-center">
+
+	<button class="btn btn-success" type="button" id="stats" onclick="window.location.href='/stats'">User Statistics</button>
+	<br>
+	<hr>
+</div>
+
+			</div>
+		</div>
+	
+	
+	<!------------------------------------------------------------------------------------------------------------------------------------------------>
 	
 	
 	

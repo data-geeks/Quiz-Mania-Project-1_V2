@@ -1,6 +1,6 @@
 <!-- All the block tags are definded to change the values dynamically using jinja at run time-->
 <!-- csrf token tag is used to removed CSRF authentication issues and is applied in all forms need to be submitted-->
-
+{% load static %} <!-- added to insert all static files-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +13,13 @@
 
 	<!-- Required CSS -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-	<link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./css/style.css" rel="stylesheet">
+	<link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link href="./css/custom_style.css" rel="stylesheet">
+	<link href="{% static 'css/custom_style.css' %}" rel="stylesheet">
 
 <!-- The cookies are not being used here as user authentication is being checked at backend using session authentication of Django-->
 <!-- 
@@ -44,9 +44,6 @@
                 }
 		</script>	
 	-->
-	<script>
-		document.ready()
-	</script>
 </head>
 <body > <!--onload="checkCookie()"-->
 	<!-- Page Header -->
@@ -76,7 +73,7 @@
 		<div class="ui text loader" style="margin-top: 250px;">Loading</div>
 	</div>
 	<div class="ui main container">
-		<form class="ui form opsi" action="/test_page" method="POST">
+		<form class="ui form opsi" action={% block test %}"/result_time" {% endblock %} method="POST">
 			{% csrf_token %}
 		<div class="ui card">
 			<div class="content"  style="background: #71c55d">
@@ -123,6 +120,7 @@
 						<input type="hidden" {% block increment %} value="0" {% endblock %} name="question_value">
 						<input type="hidden" {% block score %} value="0" {% endblock %} name="score">
 						<input type="hidden" {% block wrong %} value="0" {% endblock %} name="wrong">
+						<input type="hidden" {% block Testname %} value="Docker_B" {% endblock %} name="Testname">
 						</div>
 						
 					
@@ -132,21 +130,22 @@
 					
 					<div class="nav-soal center aligned">
 						<center>
-						<button class="btn btn-primary " type="submit" onclick="window.location.replace('localhost:8000/test_page');" >
+						<button class="btn btn-primary " type="submit">
               Next
               <i class="chevron right icon" ></i>
-            </button>
-            <button class="btn btn-success " type="submit" >
+			</button>
+		</form>
+         <!--   <button class="btn btn-success" type="submit" onclick="window.location.href='/result_time'" >
 						  
 						  Submit
-						</button>
+						</button> -->
 						</center>
 						
 					</div>
 
 				
 			
-			</form>
+		<!--	</form>  -->
 		</div>
 	</div>
 
@@ -203,9 +202,8 @@
   </script>
   <!--Timer-->
   <script type="text/javascript"> // the block timer will  remove dynamically remove the alert box from 2nd question
-		{% block timer %} alert("Click OK to BEGIN!!!"); {% endblock %}
 		document.getElementById('timer').innerHTML =
-  30 + ":" + 00;
+  02 + ":" + 00;
 startTimer();
 
 function startTimer() {

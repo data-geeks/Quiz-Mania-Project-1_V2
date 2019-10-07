@@ -3,6 +3,7 @@ from django.shortcuts import render,reverse
 from django.http import Http404,HttpResponseRedirect,HttpResponse  
 from django.contrib.auth import authenticate,login,logout 
 from django.contrib.auth.models import User 
+from TestTime.models import Score
 # Create your views here.
 
 #this is to open the login and registeration page when user comes on website first time
@@ -19,14 +20,12 @@ def login_reg(request):
 # this is to extract user data from registration form
 def register(request):
     firstname  = request.POST['firstname']
-    lastname = request.POST['lastname']
     email = request.POST['email']
-    phone = request.POST['phone']
     password = request.POST['password']
     confirmpassword = request.POST['confirmpassword']
     if password == confirmpassword: 
         # adding the user details inside the database(default user database is being used)
-        user = User.objects.create_user(username=email,first_name=firstname,last_name=lastname,email=email,password=password)
+        user = User.objects.create_user(username=email,first_name=firstname,email=email,password=password)
         user.save()
 
         # need to add a middle page or something which shows that Registration is Successful
@@ -63,3 +62,10 @@ def logout_check(request):
     else:
         return HttpResponseRedirect(reverse('logged_out'))
         
+def stats(request):
+    if not request.user.is_authenticated:  # to check if session for user has been terminated successfully
+        return HttpResponseRedirect(reverse('login_page'))
+    else:
+        score = Score.objects.filter(Email=request.user.username)
+        
+        return render(request,"stats.html",{'scoreboard':score})

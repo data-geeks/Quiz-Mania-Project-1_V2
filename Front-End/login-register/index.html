@@ -3,6 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<title>QuizMania</title>
 	<link rel="stylesheet" href="auth.css">
 	<script type="text/javascript">
@@ -25,15 +29,34 @@
     		window.location="/";
   		}
 	</script>
+	<style>
+	body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url("back1.gif");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+	</style>
 </head >
 
-<body onload="checkCookie()">
+<body onload="checkCookie()" class="bg">
+		
 	<div class="lowin">
 		<div class="lowin-brand">
 			<img src="kodinger.jpg" alt="logo">
 		</div>
 		<div class="lowin-wrapper">
-			<div class="lowin-box lowin-login">
+			<div class="lowin-box lowin-login ">
 				<div class="lowin-box-inner">
 					<form action="/cgi-bin/login" method="post">
 						<p>Sign in to continue</p>
@@ -59,26 +82,29 @@
 			<div class="lowin-box lowin-register">
 				<div class="lowin-box-inner">
 					<form action="/cgi-bin/register" method="post">
-						<p>Let's create your account</p>
-						<div>
-						<div class="lowin-group col-md-6">
-							<label>First Name</label>
+						
+						
+						<div class="lowin-group">
+							<label>Name</label>
 							<input type="text" name="firstname" autocomplete="firstname" class="lowin-input">
 						</div>
-						<div class="lowin-group col-md-6">
+					<!--	<div class="lowin-group col-md-6">
 							<label>Last Name</label>
 							<input type="text" name="lastname" autocomplete="lastname" class="lowin-input">
 						</div>
-						</div>
+						-->
+						
 					<div>
 						<div class="lowin-group">
 							<label>Email</label>
 							<input type="email" autocomplete="email" name="email" class="lowin-input" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
 						</div>
-						<div class="lowin-group">
+					<!--	<div class="lowin-group">
 							<label>Phone</label>
 							<input type="text" name="phone" class="lowin-input" pattern="[789][0-9]{9}">
 						</div>
+
+						-->
 					</div>
 					<div>
 						<div class="lowin-group">
@@ -93,10 +119,10 @@
 						<button class="lowin-btn">
 							Sign Up
 						</button>
-
 						<div class="text-foot">
-							Already have an account? <a href="" class="login-link">Login</a>
-						</div>
+								Already have an account? <a href="" class="login-link">Login</a>
+							</div>
+						
 						
 					</form>
 					
@@ -104,9 +130,11 @@
 			</div>
 		</div>
 	
+		
 		<footer class="lowin-footer">
 			
-		</footer>
+			</footer>
+		
 	</div>
 
 	<script src="auth.js"></script>

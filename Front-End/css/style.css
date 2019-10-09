@@ -1308,8 +1308,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  background: #2a2c30;
-  padding-top: 50px;
+  background: #fff;
+  
 }
 
 .footer .footer-logo .navbar-brand {

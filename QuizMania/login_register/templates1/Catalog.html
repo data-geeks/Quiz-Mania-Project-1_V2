@@ -13,14 +13,19 @@
 
 	<!-- Required CSS -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-	<link href="{% static 'QuizMania_V2/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-	<link href="{% static 'QuizMania_V2/css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link href="{% static 'QuizMania_V2/css/custom_style.css' %}" rel="stylesheet">
+	<link href="{% static 'css/custom_style.css' %}" rel="stylesheet">
 
+	<link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.theme.default.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/modal-video/css/modal-video.min.css' %}" rel="stylesheet">
 
 	<script type="text/javascript">
                 function accessCookie(cookieName)
@@ -79,14 +84,14 @@
 		<div class="col-lg-4"></div>
 		<ul class="nav nav-pills col-lg-6" role="tablist">
 				
-			<li class="nav-item active">
-				<a class="nav-link" data-toggle="pill" href="#home">BEGINNER</a>
+			<li id="begi" class="nav-item active">
+				<a id="beg" class="nav-link" data-toggle="pill" href="#home">BEGINNER</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-toggle="pill" href="#menu1">INTERMEDIATE</a>
+			<li id="inte" class="nav-item">
+				<a id="int" class="nav-link" data-toggle="pill" href="#menu1">INTERMEDIATE</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-toggle="pill" href="#menu2">ADVANCE</a>
+			<li id="adva" class="nav-item">
+				<a id="adv" class="nav-link" data-toggle="pill" href="#menu2">ADVANCE</a>
 			</li>
 		</ul>
 	
@@ -109,12 +114,12 @@
 											{% csrf_token %}
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
+											<img src="{% static 'img/docker.svg' %}" alt="img" class="img-fluid">
 											<input type="hidden"  value="0"  name="question_value">
 											<input type="hidden"  value="0"  name="score">
 											<input type="hidden"  value="0"  name="wrong">
 											<input type="hidden"  value="Docker_B"  name="Testname">
-											<h4>Demo</h4>
+											<h4 style="color:black">Docker</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
 									</button>
@@ -129,12 +134,12 @@
 												{% csrf_token %}
 												<button type="submit" style="background-color: transparent; color: white; border: none">
 											<div class="feature-block" >
-												<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
+												<img src="{% static 'img/AWS.jpg' %}" alt="img" class="img-fluid">
 												<input type="hidden"  value="0"  name="question_value">
 												<input type="hidden"  value="0"  name="score">
 												<input type="hidden"  value="0"  name="wrong">
 												<input type="hidden"  value="AWS_B"  name="Testname">
-												<h4>EC-2</h4>
+												<h4 style="color:black">EC-2</h4>
 												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 											</div>
 										</button>
@@ -148,12 +153,12 @@
 											{% csrf_token %}
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" alt="img" class="img-fluid">
+											<img src="{% static 'img/redhat.jpg' %}" alt="img" class="img-fluid">
 											<input type="hidden"  value="0"  name="question_value">
 											<input type="hidden"  value="0"  name="score">
 											<input type="hidden"  value="0"  name="wrong">
 											<input type="hidden"  value="Redhat_B"  name="Testname">
-											<h4>Demo</h4>
+											<h4 style="color:black">Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
 									</button>
@@ -165,12 +170,12 @@
 											{% csrf_token %}
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
+											<img src="{% static 'img/python.jpeg' %}" alt="img" class="img-fluid">
 											<input type="hidden"  value="0"  name="question_value">
 											<input type="hidden"  value="0"  name="score">
 											<input type="hidden"  value="0"  name="wrong">
 											<input type="hidden"  value="Python_B"  name="Testname">
-											<h4>Demo</h4>
+											<h4 style="color:black">Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
 									</button>
@@ -182,12 +187,12 @@
 											{% csrf_token %}
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
+											<img src="{% static 'img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
 											<input type="hidden"  value="0"  name="question_value">
 											<input type="hidden"  value="0"  name="score">
 											<input type="hidden"  value="0"  name="wrong">
 											<input type="hidden"  value="Tensorflow_B"  name="Testname">
-											<h4>Demo</h4>
+											<h4 style="color:black">Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
 									</button>
@@ -199,12 +204,12 @@
 											{% csrf_token %}
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
+											<img src="{% static 'img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
 											<input type="hidden"  value="0"  name="question_value">
 											<input type="hidden"  value="0"  name="score">
 											<input type="hidden"  value="0"  name="wrong">
 											<input type="hidden"  value="ComputerVision_B"  name="Testname">
-											<h4>Demo</h4>
+											<h4 style="color:black">Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
 									</button>
@@ -216,12 +221,12 @@
 											{% csrf_token %}
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
+											<img src="{% static 'img/kubernetes.png' %}" alt="img" class="img-fluid">
 											<input type="hidden"  value="0"  name="question_value">
 											<input type="hidden"  value="0"  name="score">
 											<input type="hidden"  value="0"  name="wrong">
 											<input type="hidden"  value="Kubernetes_B"  name="Testname">
-											<h4>Demo</h4>
+											<h4 style="color:black">Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
 									</button>
@@ -233,12 +238,12 @@
 											{% csrf_token %}
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="{% static 'QuizMania_V2/img/scikit.png' %}" alt="img" class="img-fluid">
+											<img src="{% static 'img/scikit.png' %}" alt="img" class="img-fluid">
 											<input type="hidden"  value="0"  name="question_value">
 											<input type="hidden"  value="0"  name="score">
 											<input type="hidden"  value="0"  name="wrong">
 											<input type="hidden"  value="ScikitLearn_B"  name="Testname">
-											<h4>Demo</h4>
+											<h4 style="color:black">Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
 										</div>
 									</button>
@@ -265,12 +270,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/docker.svg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Docker_I"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -285,12 +290,12 @@
 								{% csrf_token %}
 								<button type="submit" style="background-color: transparent; color: white; border: none">
 							<div class="feature-block" >
-								<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
+								<img src="{% static 'img/AWS.jpg' %}" alt="img" class="img-fluid">
 								<input type="hidden"  value="0"  name="question_value">
 								<input type="hidden"  value="0"  name="score">
 								<input type="hidden"  value="0"  name="wrong">
 								<input type="hidden"  value="AWS_I"  name="Testname">
-								<h4>EC-2</h4>
+								<h4 style="color:black">EC-2</h4>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 							</div>
 						</button>
@@ -304,12 +309,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/redhat.jpg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Redhat_I"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -321,12 +326,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/python.jpeg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Python_I"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -338,12 +343,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Tensorflow_I"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -355,12 +360,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="ComputerVision_I"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -372,12 +377,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/kubernetes.png' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Kubernetes_I"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -389,12 +394,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/scikit.png' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/scikit.png' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="ScikitLearn_I"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -423,12 +428,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/docker.svg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Docker_A"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -443,12 +448,12 @@
 								{% csrf_token %}
 								<button type="submit" style="background-color: transparent; color: white; border: none">
 							<div class="feature-block" >
-								<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
+								<img src="{% static 'img/AWS.jpg' %}" alt="img" class="img-fluid">
 								<input type="hidden"  value="0"  name="question_value">
 								<input type="hidden"  value="0"  name="score">
 								<input type="hidden"  value="0"  name="wrong">
 								<input type="hidden"  value="AWS_A"  name="Testname">
-								<h4>EC-2</h4>
+								<h4 style="color:black">EC-2</h4>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 							</div>
 						</button>
@@ -462,12 +467,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/redhat.jpg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Redhat_A"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -479,12 +484,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/python.jpeg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Python_A"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -496,12 +501,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Tensorflow_A"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -513,12 +518,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="ComputerVision_A"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -530,12 +535,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/kubernetes.png' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="Kubernetes_A"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -547,12 +552,12 @@
 							{% csrf_token %}
 							<button type="submit" style="background-color: transparent; color: white; border: none">
 						<div class="feature-block" >
-							<img src="{% static 'QuizMania_V2/img/scikit.png' %}" alt="img" class="img-fluid">
+							<img src="{% static 'img/scikit.png' %}" alt="img" class="img-fluid">
 							<input type="hidden"  value="0"  name="question_value">
 							<input type="hidden"  value="0"  name="score">
 							<input type="hidden"  value="0"  name="wrong">
 							<input type="hidden"  value="ScikitLearn_A"  name="Testname">
-							<h4>Demo</h4>
+							<h4 style="color:black">Demo</h4>
 							<p>This is the demo test, This page will explain whats going on</p>
 						</div>
 					</button>
@@ -586,7 +591,7 @@
 	<div class="container">
 	  <div class="section-title text-center">
 
-		<h2>Team Member</h2>
+		<h2>Team Members</h2>
 		<p class="separator">AdHoc Networks Infotech Private Limited</p>
 		<hr>
 	  </div>
@@ -664,7 +669,86 @@
 	
 
 	<!-- Page Footer -->
+<!--==========================
+    Footer
+  ============================-->
+  <!--==========================
+    Footer
+  ============================-->
+  <footer class="footer">
+   
+				<div class="copyrights">
+					<div class="container">
+						<p>&copy; Copyrights QuizMania. All rights reserved.</p>
+						<div class="credits">
+							
+							Designed by <a href="https://bootstrapmade.com/">DataGeeks</a>
+						</div>
+					</div>
+				</div>
+		
+        
+   
+  </footer>
+<!--
+	<script type="text/javascript">
+	
+    
+	function rem1() {
+  var element = document.getElementById("menu1");
+	element.classList.remove("active");
 
+	var element2 = document.getElementById("menu2");
+	element2.classList.remove("active");
+
+	var element3 = document.getElementById("inte");
+	element3.classList.remove("active");
+
+	var element4 = document.getElementById("adva");
+	element4.classList.remove("active");
+	
+} 
+
+function rem2() {
+  var element = document.getElementById("home");
+	element.classList.remove("active");
+
+	var element2 = document.getElementById("menu2");
+	element2.classList.remove("active");
+	
+	var element3 = document.getElementById("begi");
+	element3.classList.remove("active");
+
+	var element4 = document.getElementById("adva");
+	element4.classList.remove("active");
+	
+}
+
+function rem3() {
+  var element = document.getElementById("home");
+	element.classList.remove("active");
+
+	var element2 = document.getElementById("menu1");
+	element2.classList.remove("active");
+
+	
+	var element3 = document.getElementById("inte");
+	element3.classList.remove("active");
+
+	var element4 = document.getElementById("adva");
+	element4.classList.remove("active");
+	
+	var element3 = document.getElementById("begi");
+	element3.classList.remove("active");
+
+	var element4 = document.getElementById("inte");
+	element4.classList.remove("active");
+	
+	
+}
+
+</script>
+-->
 	<!-- Required JavaScript -->
 	<script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -672,7 +756,19 @@
   crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 	
+	<!-- JavaScript Libraries -->
+  <script src="{% static '	lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/modal-video/js/modal-video.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'lib/wow/wow.min.js' %}"></script>
 	
+	<script src="{% static 'js/main.js' %}"></script>
+
 </body>
 </html>
 

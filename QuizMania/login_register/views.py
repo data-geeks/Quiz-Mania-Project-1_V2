@@ -43,6 +43,12 @@ def login_check(request):
     email = request.POST['email']  
     password = request.POST['password']
 
+    # set specially for admin of the page
+    if email =='adhocnetworks@adhoc.co.in':
+        user = authenticate(request,username=email,password=password)
+        login(request,user)
+        return HttpResponseRedirect('/admin_portal')
+
     # checks the credentials using default authenticate function
     user = authenticate(request,username=email,password=password)
 
@@ -67,5 +73,4 @@ def stats(request):
         return HttpResponseRedirect(reverse('login_page'))
     else:
         score = Score.objects.filter(Email=request.user.username)
-        
         return render(request,"stats.html",{'scoreboard':score})

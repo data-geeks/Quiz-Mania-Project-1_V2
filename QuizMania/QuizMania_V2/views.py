@@ -44,9 +44,11 @@ def add_test(request):
             course_level = request.POST['level']
             test = Working_Test(TestName=course_name,TestCategory=course_category,Duration=course_duration,Level=course_level)
             test.save()
+
             uploaded_file = request.FILES['test_file']
             fs = FileSystemStorage()
-            fs.save(uploaded_file.name,uploaded_file)    
+            fs.save(uploaded_file.name,uploaded_file) 
+               
             return HttpResponseRedirect('admin_portal')
         else:
             return HttpResponse(request,"Please Contact Pykid...error has arrived")

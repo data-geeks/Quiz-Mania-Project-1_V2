@@ -97,7 +97,7 @@
     </div>
 
     <div class="container">
-      <form id="regForm" autocomplete="off" action="/Test_adder">
+      <form id="regForm" autocomplete="off" action="/Test_adder" enctype="multipart/form-data" method="POST">
         {% csrf_token %}
         <!-- One "tab" for each step in the form: -->
         <div class="tab autocomplete">
@@ -110,7 +110,7 @@
         </div>
         
         <div class="tab custom-file">
-          <p><input type="file" class="custom-file-input" id="customFile">
+          <p><input type="file" class="custom-file-input" id="customFile" name='test_file'>
           <label class="custom-file-label" for="customFile">Choose file</label></p>
           <!-- Fetching the Test File in Backend is Still Under Development  -->
           

@@ -13,7 +13,7 @@ class Docker_B(models.Model):
     Option2 = models.CharField(max_length=100)
     Option3 = models.CharField(max_length=100)
     Option4 = models.CharField(max_length=100)
-    Answer = models.CharField(max_length=2)
+    Answer = models.CharField(max_length=5)
 
     def __str__(self):
         return f'''
@@ -27,12 +27,12 @@ class Docker_B(models.Model):
 
 # Aws
 class AWS_B(models.Model):
-    Question = models.CharField(max_length=100)
-    Option1 = models.CharField(max_length=100)
-    Option2 = models.CharField(max_length=100)
-    Option3 = models.CharField(max_length=100)
-    Option4 = models.CharField(max_length=100)
-    Answer = models.CharField(max_length=2)
+    Question = models.CharField(max_length=1000)
+    Option1 = models.CharField(max_length=1000)
+    Option2 = models.CharField(max_length=1000)
+    Option3 = models.CharField(max_length=1000)
+    Option4 = models.CharField(max_length=1000)
+    Answer = models.CharField(max_length=1000)
 
     def __str__(self):
         return f'''
@@ -51,7 +51,7 @@ class Redhat_B(models.Model):
     Option2 = models.CharField(max_length=100)
     Option3 = models.CharField(max_length=100)
     Option4 = models.CharField(max_length=100)
-    Answer = models.CharField(max_length=2)
+    Answer = models.CharField(max_length=5)
 
     def __str__(self):
         return f'''

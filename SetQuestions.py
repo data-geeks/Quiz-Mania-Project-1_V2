@@ -7,8 +7,8 @@ import xml.etree.cElementTree as ET
 
 # RDS information
 username='root'
-password='password'
-database_name='test'
+password='push010808'
+database_name='mydatabase'
 host='localhost'
 
 # Now connecting the Database
@@ -16,7 +16,7 @@ conn=mysql.connect(user=username,password=password,database=database_name,host=h
 
 # Now generating a SQL language cursor 
 cur = conn.cursor()
-table_name = 'Test'
+table_name = input('Enter the table name please')
 sql = f"INSERT INTO {table_name}(Question,Option1,Option2,Option3,Option4,Answer) VALUES (%s,%s,%s,%s,%s,%s)"
 
 textfile='''

@@ -1,5 +1,5 @@
 import xml.etree.cElementTree as ET
-tree = ET.ElementTree(file='xmltest.xml')
+tree = ET.ElementTree(file='ec2.xml')
 root = tree.getroot()
 for elem in root:
     question = elem[0].text

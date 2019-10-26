@@ -13,7 +13,7 @@ class Docker_B(models.Model):
     Option2 = models.CharField(max_length=100)
     Option3 = models.CharField(max_length=100)
     Option4 = models.CharField(max_length=100)
-    Answer = models.CharField(max_length=2)
+    Answer = models.CharField(max_length=5)
 
     def __str__(self):
         return f'''

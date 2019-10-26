@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <Question>
+        <question>"Who am i?"</question>
+        <option1>"Pykid"</option1>
+        <option2>"Abhinay"</option2>
+        <option3>"Harsh"</option3>
+        <option4>"Himani"</option4>
+        <answer>"A"</answer>
+    </Question>
+    <Question>
+        <question>"Who are you?"</question>
+        <option1>"Pykid2"</option1>
+        <option2>"Abhinay2"</option2>
+        <option3>"Harsh2"</option3>
+        <option4>"Himani2"</option4>
+        <answer>"B"</answer>
+    </Question>
+</doc>

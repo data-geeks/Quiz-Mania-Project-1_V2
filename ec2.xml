@@ -1,4 +1,4 @@
-<?xml version=1.0?>
+<?xml version="1.0"?>
 <doc>
 	<Question>
 		<question>How can we protect accidental termination of our instances?</question>
@@ -201,7 +201,7 @@
 		<answer>B</answer>
 	</Question>
 	<Question>
-		<question>How is capacity (compute,storage and network speed) managed    and assigned to EC2 instances? </question>
+		<question>How is capacity (compute,storage    and network    speed) managed    and assigned to EC2 instances? </question>
 		<option1>AMI</option1>
 		<option2>Instance type</option2>
 		<option3>IOPS</option3>

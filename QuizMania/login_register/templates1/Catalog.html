@@ -1,5 +1,23 @@
 <!-- csrf_token is added in forms to get CSRF Authentication-->
-
+<!--
+	This is the basic syntax for any test page to be added
+										<div class="col-md-6 col-lg-3">
+											<form action="/AWS_B" method="post">
+												{% csrf_token %}
+												<button type="submit" style="background-color: transparent; color: white; border: none">
+											<div class="feature-block" >
+												<img src="{% static 'img/AWS.jpg' %}" alt="img" class="img-fluid">
+												<input type="hidden"  value="0"  name="question_value">
+												<input type="hidden"  value="0"  name="score">
+												<input type="hidden"  value="0"  name="wrong">
+												<input type="hidden"  value="AWS_B"  name="Testname">
+												<h4 style="color:black">EC-2</h4>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+											</div>
+										</button>
+									</form>
+									</div>
+-->
 {% load static %} <!-- it is used to apply or set path to all static files like css bootstrap js-->
 <!DOCTYPE html>
 <html lang="en">

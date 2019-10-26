@@ -1,0 +1,83 @@
+
+sudo apt-get update
+sudo apt-get install python3-pip python-dev nginx git
+
+Y
+
+sudo apt-get update
+sudo pip3 install virtualenv
+git clone https://github.com/mruanova/zillow.git
+cd Quiz-Mania-Project1_V2/QuizMania
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+pip3 install django bcrypt django-extensions
+pip3 install gunicorn
+cd QuizMania
+sudo vim settings.py
+
+
+# Inside settings.py modify these lines allowed host public IP address I for INSERT
+
+i
+
+
+ALLOWED_HOSTS = ['54.80.215.41']
+
+# add the line below to the bottom of the file
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+Save your changes and quit. ESC :wq
+
+cd .. 
+python3 manage.py collectstatic
+gunicorn --bind 0.0.0.0:8000 QuizMania.wsgi:application
+
+ctrl+c
+
+sudo vim /etc/systemd/system/gunicorn.service
+
+i
+
+[Unit]
+Description=gunicorn daemon
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/Quiz-Mania-Project1_V2/QuizMania
+ExecStart=/home/ubuntu/Quiz-Mania-Project1_V2/QuizMania/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/Quiz-Mania-Project1_V2/QuizMania/QuizMania.sock QuizMania.wsgi:application
+[Install]
+WantedBy=multi-user.target
+
+ESC :wq
+
+sudo systemctl daemon-reload
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo vim /etc/nginx/sites-available/QuizMania
+
+i
+
+server {
+  listen 80;
+  server_name 18.208.168.19;
+  location = /favicon.ico { access_log off; log_not_found off; }
+  location /static/ {
+      root /home/ubuntu/Quiz-Mania-Project1_V2/QuizMania;
+  }
+  location / {
+      include proxy_params;
+      proxy_pass http://unix:/home/ubuntu/Quiz-Mania-Project1_V2/QuizMania/QuizMania.sock;
+  }
+}
+
+ESC :wq
+
+sudo ln -s /etc/nginx/sites-available/QuizMania /etc/nginx/sites-enabled
+sudo nginx -t
+sudo rm /etc/nginx/sites-enabled/default
+sudo service nginx restart
+
+http://54.80.215.41

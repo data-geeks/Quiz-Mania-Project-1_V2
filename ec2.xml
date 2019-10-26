@@ -1,276 +1,276 @@
-<?xml version="1.0"?>
+<?xml version=1.0?>
 <doc>
 	<Question>
-		<question>"How can we protect accidental termination of our instances?"</question>
-		<option1>"By using security group and disabling remote access to instances."</option1>
-		<option2>"By using 'Enable termination protection' option."</option2>
-		<option3>"By using 'change shutdown behavior' option."</option3>
-		<option4>"We can not prevent accidental termination."</option4>
-		<answer>"B"</answer>
+		<question>How can we protect accidental termination of our instances?</question>
+		<option1>By using security group and disabling remote access to instances.</option1>
+		<option2>By using 'Enable termination protection' option.</option2>
+		<option3>By using 'change shutdown behavior' option.</option3>
+		<option4>We can not prevent accidental termination.</option4>
+		<answer>B</answer>
 	</Question>
 	<Question>
-		<question>"How can we attach our instance store volume to another instance?"</question>
-		<option1>"We can use 'force detach' and then attach to another instance."</option1>
-		<option2>"We can use 'detach volume' and then attach  to another instance."</option2>
-		<option3>"We can not detach instance or attach instance store volume."</option3>
-		<option4>"We can stop the instance. Dech the volume and attach to other instance."</option4>
-		<answer>"C"</answer>
+		<question>How can we attach our instance store volume to another instance?</question>
+		<option1>We can use 'force detach' and then attach to another instance.</option1>
+		<option2>We can use 'detach volume' and then attach  to another instance.</option2>
+		<option3>We can not detach instance or attach instance store volume.</option3>
+		<option4>We can stop the instance. Dech the volume and attach to other instance.</option4>
+		<answer>C</answer>
 	</Question>
 	<Question>
-		<question>"Is it possible to create an AMI while an instance is running?"</question>
-		<option1>"Yes, if only 'no reboot' option is checked."</option1>
-		<option2>"Yes, only if it is Linux instance"</option2>
-		<option3>"No, instance should be stopped and rebooted"</option3>
-		<option4>"Yes, AMI can be created without any change"</option4>
-		<answer>"A"</answer>
+		<question>Is it possible to create an AMI while an instance is running?</question>
+		<option1>Yes, if only 'no reboot' option is checked.</option1>
+		<option2>Yes, only if it is Linux instance</option2>
+		<option3>No, instance should be stopped and rebooted</option3>
+		<option4>Yes, AMI can be created without any change</option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>"Is it possible to change an instance type after it has been created?"</question>
-		<option1>"Instance type can not be changed."</option1>
-		<option2>"Type can be changed if it has an EBS store volume root device"</option2>
-		<option3>"Type can be changed if it has an instance store volume root device"</option3>
-		<option4>"This question doesn't make sense"</option4>
-		<answer>"B"</answer>
+		<question>Is it possible to change an instance type after it has been created?</question>
+		<option1>Instance type can not be changed.</option1>
+		<option2>Type can be changed if it has an EBS store volume root device</option2>
+		<option3>Type can be changed if it has an instance store volume root device</option3>
+		<option4>This question doesn't make sense</option4>
+		<answer>B</answer>
 	</Question>
 	<Question>
-		<question>"If any change is made to a security group rule, when are these changes effective?"</question>
-		<option1>"Changes are automatically applied after a short period"</option1>
-		<option2>"Changes will be effective after rebooting the instances in that security group"</option2>
-		<option3>"Security group rules can not be changed. You have to create a new security group and assign it to instances"</option3>
-		<option4>"Changes will be effective after 5 minutes"</option4>
-		<answer>"A"</answer>
+		<question>If any change is made to a security group rule, when are these changes effective?</question>
+		<option1>Changes are automatically applied after a short period</option1>
+		<option2>Changes will be effective after rebooting the instances in that security group</option2>
+		<option3>Security group rules can not be changed. You have to create a new security group and assign it to instances</option3>
+		<option4>Changes will be effective after 5 minutes</option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>"How can an instance be copied to another region?"</question>
-		<option1>"By stopping instance and using copy option"</option1>
-		<option2>"There is no way to copy an instance to another region"</option2>
-		<option3>"First instance's root volume is detached. Then a new instance is created in another region. Finally detached volume can be attached to new instance as root device"</option3>
-		<option4>"By creating an AMI and copy it to another region"</option4>
-		<answer>"D"</answer>
+		<question>How can an instance be copied to another region?</question>
+		<option1>By stopping instance and using copy option</option1>
+		<option2>There is no way to copy an instance to another region</option2>
+		<option3>First instance's root volume is detached. Then a new instance is created in another region. Finally detached volume can be attached to new instance as root device</option3>
+		<option4>By creating an AMI and copy it to another region</option4>
+		<answer>D</answer>
 	</Question>
 	<Question>
-		<question>"How can you change the instance type used in Auto Scaling group?"</question>
-		<option1>"As group should be deleted and recreated"</option1>
-		<option2>"Instances should be stopped and then type can be changed"</option2>
-		<option3>"A new launch configuration with a new instance type should be created and attached to AS group"</option3>
-		<option4>"It is  not possible to change the instance type"</option4>
-		<answer>"C"</answer>
+		<question>How can you change the instance type used in Auto Scaling group?</question>
+		<option1>As group should be deleted and recreated</option1>
+		<option2>Instances should be stopped and then type can be changed</option2>
+		<option3>A new launch configuration with a new instance type should be created and attached to AS group</option3>
+		<option4>It is  not possible to change the instance type</option4>
+		<answer>C</answer>
 	</Question>
 	<Question>
-		<question>"Which record type queries are free when using Route 53?"</question>
-		<option1>"AAAA"</option1>
-		<option2>"MX"</option2>
-		<option3>"Alias"</option3>
-		<option4>"TXT"</option4>
-		<answer>"C"</answer>
+		<question>Which record type queries are free when using Route 53?</question>
+		<option1>AAAA</option1>
+		<option2>MX</option2>
+		<option3>Alias</option3>
+		<option4>TXT</option4>
+		<answer>C</answer>
 	</Question>
 	<Question>
-		<question>"What three attributes are selectable when creating an EBS volume for an EC2 instance?"</question>
-		<option1>"Volume type"</option1>
-		<option2>"IOPS"</option2>
-		<option3>"Region"</option3>
-		<option4>"CMK(Customer Master Key)"</option4>
-		<answer>"A"</answer>
+		<question>What three attributes are selectable when creating an EBS volume for an EC2 instance?</question>
+		<option1>Volume type</option1>
+		<option2>IOPS</option2>
+		<option3>Region</option3>
+		<option4>CMK(Customer Master Key)</option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>"What is  EC2 instance protection?"</question> 
-		<option1>"Prevents Auto Scaling from selecting specific EC2 instance for termination when scaling out"</option1> 
-		<option2>"Prevents Auto Scaling from selecting specific EC2 instance for termination when scaling in"</option2> 
-		<option3>"Prevents Auto Scaling from selecting specific EC2 instance for termination when paused"</option3> 
-		<option4>"Prevents Auto Scaling from selecting specific EC2 instance for termination when stopped"</option4> 
-		<answer>"B"</answer>
+		<question>What is  EC2 instance protection?</question> 
+		<option1>Prevents Auto Scaling from selecting specific EC2 instance for termination when scaling out</option1> 
+		<option2>Prevents Auto Scaling from selecting specific EC2 instance for termination when scaling in</option2> 
+		<option3>Prevents Auto Scaling from selecting specific EC2 instance for termination when paused</option3> 
+		<option4>Prevents Auto Scaling from selecting specific EC2 instance for termination when stopped</option4> 
+		<answer>B</answer>
 	</Question> 
 	<Question>
-		<question>"What are three standard AWS pricing models?"</question> 
-		<option1>"elastic"</option1> 
-		<option2>"spot"</option2> 
-		<option3>"reserved"</option3> 
-            	<option4>"demand"</option4> 
-		<answer>"B"</answer>
+		<question>What are three standard AWS pricing models?</question> 
+		<option1>elastic</option1> 
+		<option2>spot</option2> 
+		<option3>reserved</option3> 
+            	<option4>demand</option4> 
+		<answer>B</answer>
 	</Question>
 	<Question>
-		<question>"How is an EBS root volume created when launching an EC2 instance from a new EBS-backed AMI?"</question>
-		<option1>"S3 template"</option1>
-		<option2>"original AMI "</option2>
-		<option3>"snapshot"</option3>
-		<option4>"instance store"</option4>
-		<answer>"C"</answer>
+		<question>How is an EBS root volume created when launching an EC2 instance from a new EBS-backed AMI?</question>
+		<option1>S3 template</option1>
+		<option2>original AMI </option2>
+		<option3>snapshot</option3>
+		<option4>instance store</option4>
+		<answer>C</answer>
 	</Question>
 	<Question>
-		<question>"What Amazon AWS sources are available for creating an EBS-Backed Linux AMI?(select two)"</question>
-		<option1>"EC2 instance"</option1>
-		<option2>"Amazon SMS"</option2>
-		<option3>"VM Import Export"</option3>
-		<option4>"EBS Snapshot"</option4>
-		<answer>"A"</answer>
+		<question>What Amazon AWS sources are available for creating an EBS-Backed Linux AMI?(select two)</question>
+		<option1>EC2 instance</option1>
+		<option2>Amazon SMS</option2>
+		<option3>VM Import Export</option3>
+		<option4>EBS Snapshot</option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>") What is required to prevent an instance from being launched and incurring costs?"</question>
-		<option1>"stop    instance "</option1>
-		<option2>"terminate    instance"</option2>
-		<option3>"terminate    AMI    and    de-register    instance"</option3>
-		<option4>"stop,    deregister    AMI    and    terminate    instance"</option4>
-		<answer>"E"</answer>
+		<question>) What is required to prevent an instance from being launched and incurring costs?</question>
+		<option1>stop    instance </option1>
+		<option2>terminate    instance</option2>
+		<option3>terminate    AMI    and    de-register    instance</option3>
+		<option4>stop,    deregister    AMI    and    terminate    instance</option4>
+		<answer>E</answer>
 	</Question>
 	<Question>
-		<question>" What    is    an    EBS    Snapshot? "</question>
-		<option1>"backup    of    an    EBS    root    volume    and    instance    data "</option1>
-		<option2>"backup    of    an    EC2    instance "</option2>
-		<option3>"backup    of    configuration    settings"</option3>
-		<option4>"backup  of  instance  store"</option4>
-		<answer>"A"</answer>
+		<question> What    is    an    EBS    Snapshot? </question>
+		<option1>backup    of    an    EBS    root    volume    and    instance    data </option1>
+		<option2>backup    of    an    EC2    instance </option2>
+		<option3>backup    of    configuration    settings</option3>
+		<option4>backup  of  instance  store</option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>"Where    are    ELB    and    Auto-Scaling    groups    deployed    as    a    unified    solution    for horizontal    scaling? "</question>
-		<option1>"database instance"</option1>
-		<option2>"all instances"</option2>
-		<option3>"web server instances"</option3>
-		<option4>"default VPC only"</option4>
-		<answer>"C"</answer>
+		<question>Where    are    ELB    and    Auto-Scaling    groups    deployed    as    a    unified    solution    for horizontal    scaling? </question>
+		<option1>database instance</option1>
+		<option2>all instances</option2>
+		<option3>web server instances</option3>
+		<option4>default VPC only</option4>
+		<answer>C</answer>
 	</Question>
 	<Question>
-		<question>"What    feature    is    supported    when    attaching    or    detaching    an    EBS volume    from    an    EC2    instance? "</question>
-		<option1>"EBS    volume    can    be    attached    and    detached    to    an    EC2    instance    in    the same    region "</option1>
-		<option2>"EBS    volume    can    be    attached    and    detached    to    an    EC2    instance    that    is cross-region "</option2>
-		<option3>"EBS    volume    can    only    be    copied    and    attached    to    an    EC2    instance    that    is cross-region "</option3>
-		<option4>"EBS    volume    can    only    be    attached    and    detached    to    an    EC2    instance    in    the same    Availability    Zone "</option4>
-		<answer>"D"</answer>
+		<question>What    feature    is    supported    when    attaching    or    detaching    an    EBS volume    from    an    EC2    instance? </question>
+		<option1>EBS    volume    can    be    attached    and    detached    to    an    EC2    instance    in    the same    region </option1>
+		<option2>EBS    volume    can    be    attached    and    detached    to    an    EC2    instance    that    is cross-region </option2>
+		<option3>EBS    volume    can    only    be    copied    and    attached    to    an    EC2    instance    that    is cross-region </option3>
+		<option4>EBS    volume    can    only    be    attached    and    detached    to    an    EC2    instance    in    the same    Availability    Zone </option4>
+		<answer>D</answer>
 	</Question>
 	<Question>
-		<question>"What    two    statements    correctly    describe    how    to    add    or    modify    IAM    roles    to    a running    EC2    instance? "</question>
-		<option1>"attach    an    IAM    role    to    an    existing    EC2    instance    from    the    EC2    console "</option1>
-		<option2>"replace    an    IAM    role    attached    to    an    existing    EC2    instance    from    the    EC2 Console "</option2>
-		<option3>"attach    an    IAM    role    to    the    user    account    and    relaunch    the    EC2    instance "</option3>
-		<option4>"add    the    EC2    instance    to    a    group    where    the    role    is    a    member "</option4>
-		<answer>"A"</answer>
+		<question>What    two    statements    correctly    describe    how    to    add    or    modify    IAM    roles    to    a running    EC2    instance? </question>
+		<option1>attach    an    IAM    role    to    an    existing    EC2    instance    from    the    EC2    console </option1>
+		<option2>replace    an    IAM    role    attached    to    an    existing    EC2    instance    from    the    EC2 Console </option2>
+		<option3>attach    an    IAM    role    to    the    user    account    and    relaunch    the    EC2    instance </option3>
+		<option4>add    the    EC2    instance    to    a    group    where    the    role    is    a    member </option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>"What    is    the    default    behavior    for    an    EC2    instance    when terminated?    (Select    two) "</question>
-		<option1>"DeleteOnTermination    attribute    cannot    be    modified "</option1>
-		<option2>"EBS    root    device    volume    and    additional    attached    volumes    are    deleted Immediately "</option2>
-		<option3>"EBS    data    volumes    that    you    attach    at    launch    persist "</option3>
-		<option4>"EBS    root    device    volume    is    automatically    deleted    when    instance Terminates "</option4>
-		<answer>"C"</answer>
+		<question>What    is    the    default    behavior    for    an    EC2    instance    when terminated?    (Select    two) </question>
+		<option1>DeleteOnTermination    attribute    cannot    be    modified </option1>
+		<option2>EBS    root    device    volume    and    additional    attached    volumes    are    deleted Immediately </option2>
+		<option3>EBS    data    volumes    that    you    attach    at    launch    persist </option3>
+		<option4>EBS    root    device    volume    is    automatically    deleted    when    instance Terminates </option4>
+		<answer>C</answer>
 	</Question>
 	<Question>
-		<question>"How do you  launch an EC2 instance after it is terminated? (Select    two) "</question>
-		<option1>"launch    a    new    instance    using    the    same    AMI    "</option1>
-		<option2>"reboot    instance    from    CLI "</option2>
-		<option3>"launch    a    new    instance    from    a    Snapshot"</option3>
-		<option4>"reboot    instance    from    management    consol "</option4>
-		<answer>"A"</answer>
+		<question>How do you  launch an EC2 instance after it is terminated? (Select    two) </question>
+		<option1>launch    a    new    instance    using    the    same    AMI    </option1>
+		<option2>reboot    instance    from    CLI </option2>
+		<option3>launch    a    new    instance    from    a    Snapshot</option3>
+		<option4>reboot    instance    from    management    consol </option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>"What will cause AWS to terminate an EC2 instance on launch?    (Select    two)"</question>
-		<option1>"security    group    error"</option1>
-		<option2>"number    of    EC2    instances    on    AWS    account    exceeded "</option2>
-		<option3>"EBS    volume    limits    exceeded "</option3>
-		<option4>"multiple    IP    addresses    assigned    to    instance "</option4>
-		<answer>"B"</answer>
+		<question>What will cause AWS to terminate an EC2 instance on launch?    (Select    two)</question>
+		<option1>security    group    error</option1>
+		<option2>number    of    EC2    instances    on    AWS    account    exceeded </option2>
+		<option3>EBS    volume    limits    exceeded </option3>
+		<option4>multiple    IP    addresses    assigned    to    instance </option4>
+		<answer>B</answer>
 	</Question>
 	<Question>
-		<question>"You recently made some configuration changes to  an EC2 instance.You then  launched    a    new    EC2    instance    from    the    same    AMI    however none    of    the    settings    were    saved.    What    is    the    cause    of    this    error? "</question>
-		<option1>"did    not    save    configuration    changes    to    EC2    instance "</option1>
-		<option2>"did    not    save    configuration    changes    to    AMI"</option2>
-		<option3>"did    not    create    new    AMI "</option3>
-		<option4>"did    not    reboot    EC2    instance    to    enable    changes "</option4>
-		<answer>"C"</answer>
+		<question>You recently made some configuration changes to  an EC2 instance.You then  launched    a    new    EC2    instance    from    the    same    AMI    however none    of    the    settings    were    saved.    What    is    the    cause    of    this    error? </question>
+		<option1>did    not    save    configuration    changes    to    EC2    instance </option1>
+		<option2>did    not    save    configuration    changes    to    AMI</option2>
+		<option3>did    not    create    new    AMI </option3>
+		<option4>did    not    reboot    EC2    instance    to    enable    changes </option4>
+		<answer>C</answer>
 	</Question>
 	<Question>
-		<question>"What    statements    are    correct    concerning    DisableApiTermination attribute?    (Select    two) "</question>
-		<option1>"cannot    enable    termination    protection    for    Spot    instances "</option1>
-		<option2>"termination    protection    is    disabled    by    default    for    an    EC2    instance "</option2>
-		<option3>"termination    protection    is    enabled    by    default    for    an    EC2    instance "</option3>
-		<option4>"can    enable    termination    protection    for    Spot    instances "</option4>
-		<answer>"B"</answer>
+		<question>What    statements    are    correct    concerning    DisableApiTermination attribute?    (Select    two) </question>
+		<option1>cannot    enable    termination    protection    for    Spot    instances </option1>
+		<option2>termination    protection    is    disabled    by    default    for    an    EC2    instance </option2>
+		<option3>termination    protection    is    enabled    by    default    for    an    EC2    instance </option3>
+		<option4>can    enable    termination    protection    for    Spot    instances </option4>
+		<answer>B</answer>
 	</Question>
 	<Question>
-		<question>"You have developed a web-based application for file sharing that will allow customers    to access files.There are a variety of sizes that include larger .pdf and video files. What two solution stacks could tenants use for an online file sharing service?  (Select    two)"</question>
-		<option1>"EC2,ELB,Auto-Scaling,S3"</option1>
-		<option2>"Route    53,    Auto-Scaling,    DynamoDB"</option2>
-		<option3>"EC2,    Auto-Scaling,    RDS"</option3>
-		<option4>"CloudFront"</option4>
-		<answer>"A"</answer>
+		<question>You have developed a web-based application for file sharing that will allow customers    to access files.There are a variety of sizes that include larger .pdf and video files. What two solution stacks could tenants use for an online file sharing service?  (Select    two)</question>
+		<option1>EC2,ELB,Auto-Scaling,S3</option1>
+		<option2>Route    53,    Auto-Scaling,    DynamoDB</option2>
+		<option3>EC2,    Auto-Scaling,    RDS</option3>
+		<option4>CloudFront</option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>"What infrastructure    services    are    provided    to    EC2    instances?    (Select    three) "</question>
-		<option1>"VPN"</option1>
-		<option2>"storage"</option2>
-		<option3>"compute"</option3>
-		<option4>"support"</option4>
-		<answer>"B"</answer>
+		<question>What infrastructure    services    are    provided    to    EC2    instances?    (Select    three) </question>
+		<option1>VPN</option1>
+		<option2>storage</option2>
+		<option3>compute</option3>
+		<option4>support</option4>
+		<answer>B</answer>
 	</Question>
 	<Question>
-		<question>"How is capacity (compute,    storage    and    network    speed) managed    and assigned to EC2 instances? "</question>
-		<option1>"AMI"</option1>
-		<option2>"Instance type"</option2>
-		<option3>"IOPS"</option3>
-		<option4>"Auto-Scaling"</option4>
-		<answer>"B"</answer>
+		<question>How is capacity (compute,storage and network speed) managed    and assigned to EC2 instances? </question>
+		<option1>AMI</option1>
+		<option2>Instance type</option2>
+		<option3>IOPS</option3>
+		<option4>Auto-Scaling</option4>
+		<answer>B</answer>
 	</Question>
 	<Question>
-		<question>"What    storage    type    enable    permanent    attachment    of    volumes    to    EC2    instances? "</question>
-		<option1>"S3"</option1>
-		<option2>"RDS"</option2>
-		<option3>"TDS"</option3>
-		<option4>"EBS"</option4>
-		<answer>"D"</answer>
+		<question>What    storage    type    enable    permanent    attachment    of    volumes    to    EC2    instances? </question>
+		<option1>S3</option1>
+		<option2>RDS</option2>
+		<option3>TDS</option3>
+		<option4>EBS</option4>
+		<answer>D</answer>
 	</Question>
 	<Question>
-		<question>"What is the recommended method for migrating (copying) an EC2 instance    to    a    different    region? "</question>
-		<option1>"terminate instance,select region, copy instance to destination region"</option1>
-		<option2>"select  AMI associated with EC2 instance and use Copy AMI option"</option2>
-		<option3>"stop instance and copy AMI to destination region "</option3>
-		<option4>"cross-region copy is not  currently supported "</option4>
-		<answer>"B"</answer>
+		<question>What is the recommended method for migrating (copying) an EC2 instance    to    a    different    region? </question>
+		<option1>terminate instance,select region, copy instance to destination region</option1>
+		<option2>select  AMI associated with EC2 instance and use Copy AMI option</option2>
+		<option3>stop instance and copy AMI to destination region </option3>
+		<option4>cross-region copy is not  currently supported </option4>
+		<answer>B</answer>
 	</Question>
 	<Question>
-		<question>"What    are    two    attributes    that    define    an    EC2    instance    type? "</question>
-		<option1>"vCPU"</option1>
-		<option2>"license type"</option2>
-		<option3>"EBS volume storage"</option3>
-		<option4>"IP address"</option4>
-		<answer>"A"</answer>
+		<question>What    are    two    attributes    that    define    an    EC2    instance    type? </question>
+		<option1>vCPU</option1>
+		<option2>license type</option2>
+		<option3>EBS volume storage</option3>
+		<option4>IP address</option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>"How    is    an    Amazon    Elastic    Load    Balancer    (ELB)    assigned? "</question>
-		<option1>"per EC2 instance"</option1>
-		<option2>"per Auto-Scaling group"</option2>
-		<option3>"per subnet"</option3>
-		<option4>"per VPC"</option4>
-		<answer>"A"</answer>
+		<question>How    is    an    Amazon    Elastic    Load    Balancer    (ELB)    assigned? </question>
+		<option1>per EC2 instance</option1>
+		<option2>per Auto-Scaling group</option2>
+		<option3>per subnet</option3>
+		<option4>per VPC</option4>
+		<answer>A</answer>
 	</Question>
 	<Question>
-		<question>"What    is    the    default    maximum    number    of    Elastic    IP    addresses    assignable    per Amazon    AWS    region? "</question>
-		<option1>"1"</option1>
-		<option2>"100"</option2>
-		<option3>"5"</option3>
-		<option4>"unlimited"</option4>
-		<answer>"C"</answer>
+		<question>What    is    the    default    maximum    number    of    Elastic    IP    addresses    assignable    per Amazon    AWS    region? </question>
+		<option1>1</option1>
+		<option2>100</option2>
+		<option3>5</option3>
+		<option4>unlimited</option4>
+		<answer>C</answer>
 	</Question>
 	<Question>
-		<question>"How    are    snapshots    for    an    EBS    volume    created    when    it    is    the    root    device    for    an instance? "</question>
-		<option1>"pause    instance,    unmount    volume    and    snapshot "</option1>
-		<option2>"terminate    instance    and    snapshot "</option2>
-		<option3>"unencrypt    volume    and    snapshot    dynamically "</option3>
-		<option4>"stop    instance,    unmount    volume    and    snapshot "</option4>
-		<answer>"D"</answer>
+		<question>How    are    snapshots    for    an    EBS    volume    created    when    it    is    the    root    device    for    an instance? </question>
+		<option1>pause    instance,    unmount    volume    and    snapshot </option1>
+		<option2>terminate    instance    and    snapshot </option2>
+		<option3>unencrypt    volume    and    snapshot    dynamically </option3>
+		<option4>stop    instance,    unmount    volume    and    snapshot </option4>
+		<answer>D</answer>
 	</Question>
 	<Question>
-		<question>"What    cloud    compute    components    are    configured    by    tenants    and    not    Amazon AWS    support    engineers?    (Select    three)"</question>
-		<option1>"upstream    physical    switch"</option1>
-		<option2>" virtual    appliances"</option2>
-		<option3>"guest    operating    system"</option3>
-		<option4>"applications and databases"</option4>
-		<answer>"F"</answer>
+		<question>What    cloud    compute    components    are    configured    by    tenants    and    not    Amazon AWS    support    engineers?    (Select    three)</question>
+		<option1>upstream    physical    switch</option1>
+		<option2> virtual    appliances</option2>
+		<option3>guest    operating    system</option3>
+		<option4>applications and databases</option4>
+		<answer>F</answer>
 	</Question>
 	<Question>
-		<question>"What    three    characteristics    or    limitations    differentiate    EC2    instance    types? "</question>
-		<option1>"VPC    only"</option1>
-		<option2>"application type"</option2>
-		<option3>"EBS volume only"</option3>
-		<option4>"virtualization type"</option4>
-		<answer>"C"</answer>
+		<question>What    three    characteristics    or    limitations    differentiate    EC2    instance    types? </question>
+		<option1>VPC    only</option1>
+		<option2>application type</option2>
+		<option3>EBS volume only</option3>
+		<option4>virtualization type</option4>
+		<answer>C</answer>
 	</Question>
 
 </doc>	

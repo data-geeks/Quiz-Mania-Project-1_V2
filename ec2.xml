@@ -90,9 +90,9 @@
 	</Question>
 	<Question>
 		<question>"How is an EBS root volume created when launching an EC2 instance from a new EBS-backed AMI?"</question>
-		<option1>"S3 template"</option2>
-		<option2>"original AMI "</option3>
-		<option3>"snapshot"</option4>
+		<option1>"S3 template"</option1>
+		<option2>"original AMI "</option2>
+		<option3>"snapshot"</option3>
 		<option4>"instance store"</option4>
 		<answer>"C"</answer>
 	</Question>

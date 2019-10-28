@@ -1,5 +1,6 @@
 import xml.etree.cElementTree as ET
-tree = ET.ElementTree(file='ec2.xml')
+filename = input("Please Enter the filename with extension to check if it works or not: ")
+tree = ET.ElementTree(file=filename)
 root = tree.getroot()
 for elem in root:
     question = elem[0].text
@@ -15,3 +16,4 @@ for elem in root:
     C : {option3}
     D: {option4}
     ''')
+print("If All Questions are printed Successfully then the file is Correct")

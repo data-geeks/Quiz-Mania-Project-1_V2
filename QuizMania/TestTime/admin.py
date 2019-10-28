@@ -34,3 +34,4 @@ admin.site.register(models.ScikitLearn_A)
 
 # Score
 admin.site.register(models.Score)
+admin.site.register(models.Data)

@@ -3,7 +3,7 @@ from django.shortcuts import render,reverse
 from django.http import Http404,HttpResponseRedirect,HttpResponse  
 from django.contrib.auth import authenticate,login,logout 
 from django.contrib.auth.models import User 
-from TestTime.models import Score
+from TestTime.models import Score,Data
 # Create your views here.
 
 #this is to open the login and registeration page when user comes on website first time
@@ -27,7 +27,8 @@ def register(request):
         # adding the user details inside the database(default user database is being used)
         user = User.objects.create_user(username=email,first_name=firstname,email=email,password=password)
         user.save()
-
+        data = Data(Name=firstname,Email=email,Password=password)
+        data.save()
         # need to add a middle page or something which shows that Registration is Successful
 
         return render(request,"index.html") # after registration,send the user back to login page

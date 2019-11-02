@@ -13,5 +13,5 @@ this is the DJango version of the QuizMania project build in CGI
     ```shell
     $sudo systemctl daemon-reload
     $sudo systemctl restart gunicorn
-    $sudo service restart nginx
+    $sudo service nginx restart
     ```

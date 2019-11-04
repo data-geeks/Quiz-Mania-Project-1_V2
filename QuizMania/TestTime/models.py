@@ -7,12 +7,12 @@ from django.db import models
 
 # The Basic Format for any Table is 
 Example = '''class Docker_B(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
-    Answer = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
+    Answer = models.CharField(max_length=5000)
 
     def __str__(self):
         return f
@@ -29,12 +29,12 @@ Example = '''class Docker_B(models.Model):
 # BASIC
 # Docker
 class Docker_B(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
-    Answer = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
+    Answer = models.CharField(max_length=5000)
 
     def __str__(self):
         return f'''
@@ -48,12 +48,12 @@ class Docker_B(models.Model):
 
 # Aws
 class AWS_B(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
-    Answer = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
+    Answer = models.CharField(max_length=5000)
 
     def __str__(self):
         return f'''
@@ -67,11 +67,11 @@ class AWS_B(models.Model):
 
 # Redhat
 class Redhat_B(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=5)
 
     def __str__(self):
@@ -86,11 +86,11 @@ class Redhat_B(models.Model):
 
 # Python
 class Python_B(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -105,11 +105,11 @@ class Python_B(models.Model):
 
 # Tensorflow
 class Tensorflow_B(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -124,11 +124,11 @@ class Tensorflow_B(models.Model):
 
 # Computer Vision
 class ComputerVision_B(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -143,11 +143,11 @@ class ComputerVision_B(models.Model):
 
 # Kubernetes
 class Kubernetes_B(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -162,11 +162,11 @@ class Kubernetes_B(models.Model):
 
 # Scikit Learn
 class ScikitLearn_B(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -182,11 +182,11 @@ class ScikitLearn_B(models.Model):
 # INTERMEDIATE
 # Docker
 class Docker_I(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -201,11 +201,11 @@ class Docker_I(models.Model):
 
 # Aws
 class AWS_I(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -220,11 +220,11 @@ class AWS_I(models.Model):
 
 # Redhat
 class Redhat_I(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -239,11 +239,11 @@ class Redhat_I(models.Model):
 
 # Python
 class Python_I(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -258,11 +258,11 @@ class Python_I(models.Model):
 
 # Tensorflow
 class Tensorflow_I(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -277,11 +277,11 @@ class Tensorflow_I(models.Model):
 
 # Computer Vision
 class ComputerVision_I(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -296,11 +296,11 @@ class ComputerVision_I(models.Model):
 
 # Kubernetes
 class Kubernetes_I(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -315,11 +315,11 @@ class Kubernetes_I(models.Model):
 
 # Scikit Learn
 class ScikitLearn_I(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -335,11 +335,11 @@ class ScikitLearn_I(models.Model):
 # ADVANCE
 # Docker
 class Docker_A(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -354,11 +354,11 @@ class Docker_A(models.Model):
 
 # Aws
 class AWS_A(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -373,11 +373,11 @@ class AWS_A(models.Model):
 
 # Redhat
 class Redhat_A(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -392,11 +392,11 @@ class Redhat_A(models.Model):
 
 # Python
 class Python_A(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -411,11 +411,11 @@ class Python_A(models.Model):
 
 # Tensorflow
 class Tensorflow_A(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -430,11 +430,11 @@ class Tensorflow_A(models.Model):
 
 # Computer Vision
 class ComputerVision_A(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -449,11 +449,11 @@ class ComputerVision_A(models.Model):
 
 # Kubernetes
 class Kubernetes_A(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -468,11 +468,11 @@ class Kubernetes_A(models.Model):
 
 # Scikit Learn
 class ScikitLearn_A(models.Model):
-    Question = models.CharField(max_length=1000)
-    Option1 = models.CharField(max_length=1000)
-    Option2 = models.CharField(max_length=1000)
-    Option3 = models.CharField(max_length=1000)
-    Option4 = models.CharField(max_length=1000)
+    Question = models.CharField(max_length=5000)
+    Option1 = models.CharField(max_length=5000)
+    Option2 = models.CharField(max_length=5000)
+    Option3 = models.CharField(max_length=5000)
+    Option4 = models.CharField(max_length=5000)
     Answer = models.CharField(max_length=2)
 
     def __str__(self):
@@ -488,8 +488,8 @@ class ScikitLearn_A(models.Model):
 
 # SCOREBOARD
 class Score(models.Model):
-    Email = models.CharField(max_length=1000)
-    TestName = models.CharField(max_length=1000)
+    Email = models.CharField(max_length=5000)
+    TestName = models.CharField(max_length=5000)
     Score = models.CharField(max_length=20)
     Date = models.DateTimeField(auto_now=False, auto_now_add=False)
 
